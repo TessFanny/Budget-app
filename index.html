@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>QUIZ APP</title>
+</head>
+<body>
+  <!-- content container  --> 
+  <div class="container">
+       <!-- title  -->  
+    <h2>BUDGET APP</h2>
+  <!-- budget container  -->   
+    <div class="budget-container">
+      <label for="budget">Please Enter Your Budget</label>
+      <input type="number" id="budget-input">
+      <button class="btn" id="budget-btn">Calculate</button>
+    </div>
+    <!-- resume budget expenses balance  --> 
+    <!-- RESUME container  --> 
+    <div class="resume-container">
+      <!-- start resume BUDGET container  --> 
+      <div class="resume" id="resume-budget">
+        <h5>BUDGET</h5>
+        <span><i class="fas fa-money-bill-wave"></i></span>
+        <p class="budget-amount" id="budget-amount">$ 0</p>
+      </div>
+      <!-- end resume BUDGET container  --> 
+       <!-- start resume EXPENSES container  --> 
+      <div class="resume" id="resume-budget">
+        <h5>EXPENSES</h5>
+        <span><i class="far fa-credit-card"></i></span>
+        <p class="budget-amount" id="budget-amount">$ 0</p>
+      </div>
+      <!-- END resume EXPENSES container  --> 
+      <!-- start resume BALANCE container  --> 
+      <div class="resume" id="resume-budget">
+        <h5>BALANCE</h5>
+        <span><i class="fas fa-dollar-sign"></i></span>
+        <p class="budget-amount" id="budget-amount">$ 0</p>
+      </div>
+       <!--  end resume BALANCE container  --> 
+    </div>
+    <!--  end RESUME container  -->
+    <!--  START EXPENSES container  -->
+    <div class="expenses-container">
+      <label for="expenses"> Please Enter Your Expense</label>
+      <input type="text" id="input-expenses">
+      <label for="expenses"> Please Enter Expense Amount</label>
+      <input type="text" id="input-expenses-amount">
+      <button class="btn" id="btn-expenses">Add Expense</button>
+    </div>
+   <!--  END EXPENSES container  --> 
+   <!--  START total EXPENSES container  -->
+   <div class="expenses-container-title-value">
+      <div class="expenses-title">
+      <h5 id="total-expenses-title">EXPENSE TITLE</h5>
+      <ul>
+        <li id="title">name</li>
+      </ul>
+      </div>
+     <div class="expenses-value">
+      <h5 id="total-expenses-value">EXPENSE VALUE</h5>
+      <p id="value">$4</p>
+     </div>
+     <div class="edit-trash-icons">
+      <i class="far fa-edit edit"></i>
+      <i class="far fa-trash-alt trash"></i>
+     </div>
+   </div>
+   
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

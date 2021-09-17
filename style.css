@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+body{  
+  font-family: sans-serif;
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color: rgb(170, 192, 199); 
+}
+.container{
+width: 100vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+h2{
+margin-top: 30px;
+}
+.budget-container{
+margin: 20px;
+display: flex;
+flex-direction: column;
+width:60% ;
+border: 2px solid rgb(24, 146, 48);
+padding: 0px 30px 20px;
+border-radius: 5px;
+}
+.budget-container label{
+margin: 10px 0 0;
+}
+.budget-container input{
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid rgb(24, 146, 48);
+  border-radius: 5px;
+}
+.budget-container .btn{
+  padding: 5px;
+  width: 120px;
+  color: rgb(24, 146, 48);
+  border: 1px solid rgb(24, 146, 48);
+  border-radius: 5px;
+}
+
+.resume-container{
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 0px 30px 20px;
+  border-radius: 5px;
+  width: 60%;
+}
+.resume-container .resume{
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  text-align: center;
+  gap: 10px;
+}
+.resume-container i{
+  color: rgb(2, 71, 109);
+  font-size: 30px;
+}
+.expenses-container{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid rgb(223, 40, 20);
+  padding: 0px 30px 20px;
+  border-radius: 5px;
+  width: 60%;
+}
+.expenses-container label{
+  margin: 10px 0 0;
+}
+.expenses-container input{
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid rgb(226, 37, 34);
+  border-radius: 5px;
+}
+.expenses-container .btn{
+  padding: 5px;
+  width: 120px;
+  color: rgb(224, 17, 17);
+  border: 1px solid rgb(223, 54, 54);
+  border-radius: 5px;
+}
+
+.expenses-container-title-value{
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  text-align: center;
+  padding: 10px 30px 20px;
+  border-radius: 5px;
+  width: 60%;
+}
+
+.expenses-container-title-value .edit-trash-icons{
+  padding-top: 28px;
+}
+.edit-trash-icons .edit{
+  color: rgb(2, 71, 109);
+  padding-right: 10px;
+
+}
+.edit-trash-icons .trash{
+  color: red;
+}
+.expenses-title{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.expenses-value{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (max-width: 550px){
+  .resume-container{
+    background-color: red;
+    width: 65%;
+  }
+
+
+}
+@media screen and (max-width: 700px){
+  .expenses-container-title-value {
+  
+    gap: 20px;
+  }
+  .edit-trash-icons{
+    display: flex;
+  }
+}
