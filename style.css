@@ -12,7 +12,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center; 
-  background-color: rgb(170, 192, 199); 
+  background: linear-gradient(30deg, #ba5370, #f4e2d8); 
 }
 .container{
 width: 100vw;
@@ -25,11 +25,14 @@ h2{
 margin-top: 30px;
 }
 .budget-container{
-margin: 20px;
-display: flex;
-flex-direction: column;
 width:60% ;
 border: 2px solid rgb(24, 146, 48);
+border-radius: 5px;
+}
+#budget-btn{
+display: flex;
+flex-direction: column;
+width:100% ;
 padding: 0px 30px 20px;
 border-radius: 5px;
 }
@@ -38,7 +41,7 @@ margin: 10px 0 0;
 }
 .budget-container input{
   margin: 10px 0;
-  padding: 5px;
+  padding: 5px;  
   border: 1px solid rgb(24, 146, 48);
   border-radius: 5px;
 }
@@ -51,10 +54,9 @@ margin: 10px 0 0;
 }
 
 .resume-container{
-  margin: 20px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  
   padding: 0px 30px 20px;
   border-radius: 5px;
   width: 60%;
@@ -71,15 +73,18 @@ margin: 10px 0 0;
   color: rgb(2, 71, 109);
   font-size: 30px;
 }
-.expenses-container{
-  margin: 20px;
+.expenses-container{  
+  width: 60%;
+}
+#btn-expenses{ 
+  height: 100%;
+  width: 100%;
+  padding: 10px 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid rgb(223, 40, 20);
-  padding: 0px 30px 20px;
+  border: 2px solid rgb(185, 51, 36);
   border-radius: 5px;
-  width: 60%;
 }
 .expenses-container label{
   margin: 10px 0 0;
@@ -87,7 +92,7 @@ margin: 10px 0 0;
 .expenses-container input{
   margin: 10px 0;
   padding: 5px;
-  border: 1px solid rgb(226, 37, 34);
+  border: 1px solid rgb(165, 39, 37);
   border-radius: 5px;
 }
 .expenses-container .btn{
@@ -98,42 +103,19 @@ margin: 10px 0 0;
   border-radius: 5px;
 }
 
-.expenses-container-title-value{
-  margin: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-content: space-between;
-  text-align: center;
-  padding: 10px 30px 20px;
-  border-radius: 5px;
-  width: 60%;
-}
 
-.expenses-container-title-value .edit-trash-icons{
-  padding-top: 28px;
-}
 .edit-trash-icons .edit{
   color: rgb(2, 71, 109);
   padding-right: 10px;
 
 }
 .edit-trash-icons .trash{
-  color: red;
+  color: rgb(145, 25, 25);
 }
-.expenses-title{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.expenses-value{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+
 
 @media screen and (max-width: 550px){
   .resume-container{
-    background-color: red;
     width: 65%;
   }
 
@@ -147,4 +129,97 @@ margin: 10px 0 0;
   .edit-trash-icons{
     display: flex;
   }
+}
+#resume-budget p, #resume-budget span{
+  color: green;
+  font-size: 30px;
+}
+#resume-expense p, #resume-expense span{
+  color: rgb(133, 19, 19);
+  font-size: 30px;
+  
+}
+#resume-balance p, #resume-balance span{
+  font-size: 30px;
+}
+.exp-val {
+  display: flex;
+  width: 30px;
+  width: 100px;
+  justify-content: center;
+}
+
+
+.expenses-value p, .expenses-value span{
+  color: rgb(128, 20, 20);
+  font-size: 30px;
+}
+.budget-error-msg, .expense-error-msg{
+  background-color: rgb(218, 141, 141);
+  padding: 20px;
+  width: 50%;
+  margin-left: 30px;
+  color: brown;
+  border-radius: 10px;
+  display: none;
+}
+.budget-error-msg{
+  margin-top: 20px;
+}
+.budget-error-msg.show, .expense-error-msg.show{
+  display: block;
+}
+
+.expenses-container-title-value{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  text-align: center;
+  padding: 10px 30px 20px;
+  border-radius: 5px;
+  width: 60%;
+}
+.expenses-title{
+  display: flex;
+  gap: 20px;  
+}
+.expense-values{
+ display: flex;
+ justify-content: space-between;
+ align-items: baseline;
+ width: 410px;
+ 
+}
+.title-value{
+  display: flex;
+  margin-right: 100px;
+  color: rgb(189, 12, 12); 
+  text-align: center;
+  
+  width: 400px;
+  justify-content: space-between;
+  padding: 5px 10px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.title-value h5{
+  width: 50px;
+  text-align: center;
+}
+.edit-trash-icons{
+  width: 70px;
+  display: flex;
+  margin-right: 20px;
+  text-align: center;
+}
+#balance-amount.show-green{
+color: green;
+}
+#balance-amount.show-red{
+  color: rgb(102, 33, 33);
+}
+#balance-amount.show-black{
+  color: black;
 }

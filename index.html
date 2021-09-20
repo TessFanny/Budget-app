@@ -7,18 +7,23 @@
     <link rel="stylesheet" href="style.css">
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>QUIZ APP</title>
+    <title>BUDGET APP</title>
 </head>
 <body>
   <!-- content container  --> 
   <div class="container">
        <!-- title  -->  
     <h2>BUDGET APP</h2>
-  <!-- budget container  -->   
+    <!-- budget error message  --> 
+    <p class="budget-error-msg">Value cannot be empty or negative</p>
+  <!-- budget container  --> 
+     
     <div class="budget-container">
+      <form id="budget-btn" >
       <label for="budget">Please Enter Your Budget</label>
       <input type="number" id="budget-input">
-      <button class="btn" id="budget-btn">Calculate</button>
+      <button type="submit" class="btn" >Calculate</button>
+      </form>      
     </div>
     <!-- resume budget expenses balance  --> 
     <!-- RESUME container  --> 
@@ -27,52 +32,59 @@
       <div class="resume" id="resume-budget">
         <h5>BUDGET</h5>
         <span><i class="fas fa-money-bill-wave"></i></span>
-        <p class="budget-amount" id="budget-amount">$ 0</p>
+        <div class="exp-val">
+          <span>$</span> 
+        <p class="budget-amount" id="budget-amount"> 0</p>
+        </div>
+        
       </div>
       <!-- end resume BUDGET container  --> 
        <!-- start resume EXPENSES container  --> 
-      <div class="resume" id="resume-budget">
+      <div class="resume" id="resume-expense">
         <h5>EXPENSES</h5>
         <span><i class="far fa-credit-card"></i></span>
-        <p class="budget-amount" id="budget-amount">$ 0</p>
+        <div class="exp-val">
+          <span>$</span> 
+          <p class="budget-amount" id="expense-amount"> 0</p>
+        </div>
+        
+        
       </div>
       <!-- END resume EXPENSES container  --> 
       <!-- start resume BALANCE container  --> 
-      <div class="resume" id="resume-budget">
+      <div class="resume" id="resume-balance">
         <h5>BALANCE</h5>
         <span><i class="fas fa-dollar-sign"></i></span>
-        <p class="budget-amount" id="budget-amount">$ 0</p>
+        <div class="exp-val">
+         
+        <p class="budget-amount" id="balance-amount">$0</p>
+        </div>
+        
       </div>
        <!--  end resume BALANCE container  --> 
     </div>
     <!--  end RESUME container  -->
+    <p class="expense-error-msg">Value cannot be empty or negative</p> 
     <!--  START EXPENSES container  -->
     <div class="expenses-container">
-      <label for="expenses"> Please Enter Your Expense</label>
-      <input type="text" id="input-expenses">
+      <form id="btn-expenses">
+        <label for="expenses"> Please Enter Your Expense</label>
+      <input type="text" id="input-expenses-name">
       <label for="expenses"> Please Enter Expense Amount</label>
-      <input type="text" id="input-expenses-amount">
-      <button class="btn" id="btn-expenses">Add Expense</button>
+      <input type="number" id="input-expenses-value">
+      <button class="btn" >Add Expense</button>
+      </form>
+      
     </div>
    <!--  END EXPENSES container  --> 
    <!--  START total EXPENSES container  -->
    <div class="expenses-container-title-value">
       <div class="expenses-title">
-      <h5 id="total-expenses-title">EXPENSE TITLE</h5>
-      <ul>
-        <li id="title">name</li>
-      </ul>
-      </div>
-     <div class="expenses-value">
-      <h5 id="total-expenses-value">EXPENSE VALUE</h5>
-      <p id="value">$4</p>
-     </div>
-     <div class="edit-trash-icons">
-      <i class="far fa-edit edit"></i>
-      <i class="far fa-trash-alt trash"></i>
-     </div>
+        <h5 id="total-expenses-title">EXPENSE TITLE</h5>
+        <h5 id="total-expenses-value">EXPENSE VALUE</h5>
+      </div>   
    </div>
-   
+ 
   </div>
   <script src="app.js"></script>
 </body>
